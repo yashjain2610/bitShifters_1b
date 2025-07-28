@@ -27,11 +27,11 @@ services:
     depends_on:
       - ollama
     volumes:
-      - ./Collection 1:/app/Collection 1
-      - ./Collection 2:/app/Collection 2
-      - ./Collection 3:/app/Collection 3
-      - ./json_output:/app/json_output
-      - ./models:/app/models
+      - "./Collection 1:/app/Collection 1"
+      - "./Collection 2:/app/Collection 2"
+      - "./Collection 3:/app/Collection 3"
+      - "./json_output:/app/json_output"
+      - "./models:/app/models"
     environment:
       - OLLAMA_API_URL=http://ollama:11434/api
     deploy:

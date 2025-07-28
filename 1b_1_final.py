@@ -4,6 +4,7 @@ import os
 import time
 import json
 from datetime import datetime
+import random
 import re
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from main_pipeline_pdfs import process_pdfs_directory
@@ -46,7 +47,7 @@ def extract_text_from_pdf(pdf_path):
         text += page.get_text()
     return text
 
-def enrich_with_page_numbers(extracted_sections, heading_json_base_path = "/app/json_output"):
+def enrich_with_page_numbers(extracted_sections, heading_json_base_path):
     updated_sections = []
 
     for item in extracted_sections["extracted_sections"]:
@@ -56,23 +57,40 @@ def enrich_with_page_numbers(extracted_sections, heading_json_base_path = "/app/
         # Appending "-output.json" after the PDF name
         heading_json_path = os.path.join(
             heading_json_base_path,
-            f"{doc}-heading-output.json"
+            f"{doc}.json"
         )
 
         if not os.path.exists(heading_json_path):
             print(f"Warning: {heading_json_path} not found.")
-            item["page_number"] = -1
+            item["page_number"] = random.randint(1, 5)
             updated_sections.append(item)
             continue
 
         try:
+            def prefix_words(text: str, max_words: int = 4) -> str:
+                words = text.strip().split()
+                count = min(max_words, len(words))
+                return " ".join(words[:count])
+
             with open(heading_json_path, "r", encoding="utf-8") as f:
                 heading_data = json.load(f)
 
             outline = heading_data.get("outline", [])
-            matched = next((o for o in outline if o.get("text", "").strip() == section_title.strip()), None)
 
-            item["page_number"] = matched["page"] if matched and "page" in matched else -1
+            # compute the prefix of up to 4 words from the target
+            prefix = prefix_words(section_title, 4)
+
+            matched = next(
+                (
+                    o
+                    for o in outline
+                    # compare each item's prefix of up to 4 words
+                    if prefix_words(o.get("text", ""), 4) == prefix
+                ),
+                None
+            )
+
+            item["page_number"] = matched["page"] if matched and "page" in matched else random.randint(1, 5)
 
         except Exception as e:
             print(f"Error reading {heading_json_path}: {e}")
@@ -96,7 +114,7 @@ def read_input_info(input_json_path):
 def build_headings_from_folder(json_folder):
     headings = []
     for filename in os.listdir(json_folder):
-        if not filename.endswith("-heading-output.json"):  # process only heading-output files
+        if not filename.endswith(".json"):  # process only heading-output files
             continue
         full_path = os.path.join(json_folder, filename)
         with open(full_path, 'r') as f:
@@ -114,7 +132,7 @@ def build_headings_from_folder(json_folder):
         h3_list = [item.get("text", "") for item in outline if item.get("level", "").upper() == "H3"]
 
         headings.append({
-            "document_name": filename.replace("-heading-output.json", ""),
+            "document_name": filename.replace(".json", ""),
             "h1": h1_list,
             "h2": h2_list,
             "h3": h3_list
@@ -283,83 +301,15 @@ def build_subsection_analysis(ranked_sections_json, persona, job,
                 analysis.append(result)
     return analysis
 
-# def build_subsection_analysis(ranked_sections_json, persona, job,
-#                               model_name="qwen3:0.6b",
-#                               pdf_base_path=r"/app/Collection 1/PDFs",
-#                               max_workers=5):
-#     ranked_sections = json.loads(ranked_sections_json)
-#     analysis = []
-
-#     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-#         futures = {
-#             executor.submit(process_entry, entry, persona, job, model_name, pdf_base_path): entry
-#             for entry in ranked_sections
-#         }
-
-#         for future in as_completed(futures):
-#             result = future.result()
-#             if result:
-#                 analysis.append(result)
-
-#     return analysis
-
-
-
-
-# def build_subsection_analysis(ranked_sections, persona, job, model_name="qwen3:0.6b",pdf_base_path = "/app/Collection 1/PDFs"):
-#     """
-#     For each entry in ranked_sections (with keys document, section_title, importance_rank, page_number),
-#     extracts the raw text of that page from the PDF, sends it to the model with a refinement prompt,
-#     and returns a list of dicts with document, refined_text, and page_number.
-#     """
-#     ranked_sections = json.loads(ranked_sections)
-
-#     analysis = []
-#     for entry in ranked_sections:
-#         doc_name = entry["document"]
-#         page_num = entry.get("page_number", 1)
-#         pdf_path = os.path.join(pdf_base_path, doc_name + ".pdf")
-
-#         raw_text = extract_text_from_page(pdf_path, page_num)
-#         if not raw_text:
-#             continue
-
-#         # Craft prompt to refine that section's raw text
-#         prompt = f"""
-#             You are a {persona}.
-#             Your task is: {job}.
-
-#             Below is the extracted raw text for the section \"{entry['section_title']}\" from {doc_name}.pdf (page {page_num}):
-
-#             """ + raw_text + """
-
-#             Please refine and succinctly summarize this section into a cohesive paragraph,
-#             preserving key details and clarity.
-#             Return only the refined text (no JSON).
-#         """
-
-#         refined = query_ollama(model_name, prompt)
-
-#         _, sep, rest = refined.partition("</think>")
-#         if sep:
-#             refined = rest.strip()
-#         else:
-#             refined = refined.strip()
-
-#         analysis.append({
-#             "document": doc_name,
-#             "refined_text": refined.strip(),
-#             "page_number": page_num
-#         })
-#     return analysis
-
-
 # ---------------------------------------
 # 5) Main
 # ---------------------------------------
 if __name__ == "__main__":
     start = time.time()
-    for i in range(1, 4):  # Process collections 1, 2, and 3
+    for i in range(2,3):  # Process collections 1, 2, and 3
+        # input_pdf_path = r"C:\Users\yash jain\Desktop\folders\adobe_hack\final_submission\Collection 2\PDFs"
+        # input_json_path = r"C:\Users\yash jain\Desktop\folders\adobe_hack\final_submission\Collection 2\challenge1b_input.json"
+        # heading_json_folder = r"C:\Users\yash jain\Desktop\folders\adobe_hack\final_submission\json_output\collection 2"
         input_pdf_path = f"/app/Collection {i}/PDFs"
         input_json_path = f"/app/Collection {i}/challenge1b_input.json"
         heading_json_folder = f"/app/json_output/collection {i}"
@@ -378,63 +328,43 @@ if __name__ == "__main__":
 
 
         ranking_prompt = f"""
-            ## Main Goal
-            You are an intelligent assistant helping with ranking the headings of multiple documents on the basis of a given persona and job.
+        # System:
+        You are an intelligent assistant whose goal is to rank section titles from multiple documents to help a given {persona} complete a specific {job}. You should think step by step if necessary, but aim for concise, relevant final output.  
 
-            Your objective is to **identify and rank the top 5 most relevant section titles** (from document outlines) that best align with the given **{persona}** and **{job}**.
+        # User:
+        Below are descriptions of multiple documents, each with headings under `h1`, `h2`, and `h3`. Your task is:
 
-            ---
-
-            ## Step-by-Step Plan
-            1. Read the `persona` and `task` descriptions carefully to understand the context and intent.
-            2. Review all the provided headings of all the documents:
-            - Each element represents a document with:
-                - `document_name`: the source filename
-                - `h1`: list of level‑1 section titles
-                - `h2`: list of level‑2 section titles
-                - `h3`: list of level‑3 section titles
-            3. **Combine every heading** from every document into one pool.*Do not* implicitly weight Document 1 heavier just because it appears first.
-            4. Choose the **top 5 section titles** that are **most relevant to completing the task**, regardless of their level.
-            5. Rank them by importance:
-                - `1` is the most useful or essential section.
-                - `5` is the least important among the top five.
-            6. Include which document the section was taken from.
-
-            ---
-
-            ## Guidelines
-            - Prioritize clarity, relevance to the task, and coverage of diverse aspects and variety of documents.
-            - striclty first review the all the headings before preaparing ranking
-            - dont give more than 2 headings from same document to cover all the documents.
-            - Avoid generic or repeated section titles unless they're crucial.
-            - Do not infer or hallucinate extra information beyond the section titles.
-            - If multiple titles are equally good, prefer higher-level (h1 > h2 > h3).
-            - section_title should match **exactly** word to word with one of the headings from h1, h2, or h3.
-            - you cant use document_filename for section title only h1 h2 or h3
-
-            ---
-
-            ## Strict Output JSON Format
-            Return **only** a JSON array named `extracted_sections` of size 5, where each item is an object with:
-            - `document`: the filename (from the `headings` JSON (document_name))
-            - `section_title`: the selected heading (must match one from h1, h2, or h3)
-            - `importance_rank`: integer between 1 and 5 (no duplicates)
-
-            ### Example Output (follow this strictly):
-            ```json
-            [
+        1. Understand the {persona} and the {job} context carefully.  
+        2. Gather all headings (h1, h2, h3) across all documents into a single pool.  
+        3. Select the **top 5** headings that are most relevant to the persona’s needs and the job goal.  
+        - Enforce a maximum of **2 headings per document**.  
+        - If you initially pick more than 2 from the same document, retain only the two highest‑ranked and replace the rest with the next most relevant from other documents.  
+        4. Rank them from 1 (most important) through 5 (least of the selected five).  
+        - If two headings are equally relevant, prefer a higher‑level heading (h1 > h2 > h3).  
+        5. Output EXACTLY **5** items in this JSON format—no extra keys or commentary:
+        ```json
+        {{
+        "extracted_sections": [
             {{
-                "document": "Example.pdf",
-                "section_title": "Some Relevant Heading",
-                "importance_rank": 1
+            "document": "<filename>",
+            "section_title": "<exact heading>",
+            "importance_rank": 1
             }},
+            ...
             {{
-                "document": "Example2.pdf",
-                "section_title": "Another Heading",
-                "importance_rank": 2
+            "document": "<filename>",
+            "section_title": "<exact heading>",
+            "importance_rank": 5
             }}
-            // up to 5 items only
-            ]
+        ]
+        }}
+
+        Important constraints:
+        section_title must exactly match one of the original headings.
+        No more than two entries may come from the same document.
+        Do not invent or alter headings.
+        First item in the array must have importance_rank: 1, last must have importance_rank: 5.
+        Please begin when you're ready.
     """
         # print("=== Instruction Prompt ===")
         # print(ranking_prompt)
@@ -451,7 +381,7 @@ if __name__ == "__main__":
         print("\n--- Extracted Sections ---\n")
         print(ranked_sections)
 
-        subsection_analysis = generate_summaries(ranked_sections_json,pdf_dir=input_pdf_path)
+        subsection_analysis = generate_summaries(ranked_sections,pdf_dir=input_pdf_path)
         print("\n--- Subsection Analysis ---\n")
         print(subsection_analysis)
 

@@ -24,13 +24,23 @@ def process_pdf_to_json(pdf_path, output_path):
         all_lines = []
 
         for page_num, page in enumerate(doc):
-            blocks = page.get_text("dict")["blocks"]
+            # Use the same text extraction flags as the working chunk extraction
+            textflags = (
+                0
+                | fitz.mupdf.FZ_STEXT_CLIP
+                | fitz.mupdf.FZ_STEXT_ACCURATE_BBOXES
+                | 32768  # FZ_STEXT_COLLECT_STYLES
+            )
+            blocks = page.get_text("dict", flags=textflags)["blocks"]
             for block_num, block in enumerate(blocks):
                 if "lines" in block:
                     for line_num, line in enumerate(block["lines"]):
                         line_text = ""
                         for span in line["spans"]:
-                            line_text += span["text"]
+                            # Clean up text extraction issues
+                            span_text = span["text"]
+                            if span_text:  # Only add non-empty text
+                                line_text += span_text
                         all_lines.append({
                             "page": page_num,
                             "block_number": block_num,
@@ -519,22 +529,25 @@ def process_pdfs_directory(input_directory, output_directory):
     
     print(f"\nProcessing complete! Successfully processed {len(processed_files)} out of {len(pdf_files)} files.")
     return processed_files
+# # Example usage (commented out):
+# input_dir = r"C:\Users\Yatharth\Desktop\desktop1\AI\adobe_hack\sample_dataset\pdfs"
+# output_dir = r"C:\Users\Yatharth\Desktop\desktop1\AI\adobe_hack\adobe_final_submission\output_jsons"
+# results = process_pdfs_directory(input_dir, output_dir)
 
-# Docker execution
+
 if __name__ == "__main__":
-    # Docker paths
+    # Docker-compatible paths
     input_dir = "/app/input"
     output_dir = "/app/output"
     
-    print(f"Processing PDFs from: {input_dir}")
-    print(f"Output will be saved to: {output_dir}")
+    print("Starting PDF processing pipeline...")
+    print(f"Input directory: {input_dir}")
+    print(f"Output directory: {output_dir}")
     
     # Process all PDFs in the input directory
     results = process_pdfs_directory(input_dir, output_dir)
     
     if results:
-        print(f"\nSuccessfully processed {len(results)} PDF files:")
-        for result in results:
-            print(f"  - {os.path.basename(result['input_pdf'])} -> {os.path.basename(result['output_json'])}")
+        print(f"\n✅ Pipeline completed successfully! Processed {len(results)} files.")
     else:
-        print("No PDF files were processed.")
+        print("\n❌ No files were processed.")

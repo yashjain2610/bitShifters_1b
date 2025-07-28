@@ -4,6 +4,7 @@ import os
 from datetime import datetime
 from pipeline.text_extractor import TextExtractor
 from pipeline.text_refiner import TextRefiner
+import random
 
 def generate_summaries(ranked_sections, pdf_dir, models_dir="models"):
     """
@@ -47,7 +48,7 @@ def generate_summaries(ranked_sections, pdf_dir, models_dir="models"):
             pdf_filename=section['document'],
             page_number=section['page_number'],
             heading_text=title,
-            num_lines=50  # Get 20 lines of context as requested
+            num_lines=70  # Get 20 lines of context as requested
         )
         
         if text_for_summarization:
