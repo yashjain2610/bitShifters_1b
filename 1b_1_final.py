@@ -306,7 +306,7 @@ def build_subsection_analysis(ranked_sections_json, persona, job,
 # ---------------------------------------
 if __name__ == "__main__":
     start = time.time()
-    for i in range(2,3):  # Process collections 1, 2, and 3
+    for i in range(1,4):  # Process collections 1, 2, and 3
         # input_pdf_path = r"C:\Users\yash jain\Desktop\folders\adobe_hack\final_submission\Collection 2\PDFs"
         # input_json_path = r"C:\Users\yash jain\Desktop\folders\adobe_hack\final_submission\Collection 2\challenge1b_input.json"
         # heading_json_folder = r"C:\Users\yash jain\Desktop\folders\adobe_hack\final_submission\json_output\collection 2"
