@@ -1,0 +1,170 @@
+{
+  "title": "",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Export",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Recover the last saved version",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "The Autosave feature won’t work in the following cases:",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "To prevent lost changes after an unexpected interruption, enable the Autosave feature, which\nis the default setting.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Set up automatic saving",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Recover lost changes after an unexpected shutdown",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "1. Start Acrobat or open the file you were working on last.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "3. Save the file or files with the same names as the files you were originally working on.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "You can easily convert your PDF files into Microsoft Powerpoint (PPT/PPTX) using Adobe",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "3. From the Convert menu in the left pane, select Microsoft PowerPoint PPTX.",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "File format op�ons for PDF export in Acrobat",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Adobe PDF options",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "Image conversion settings",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "JPEG and JPEG 2000 conversion settings",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "File settings",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "decompressed. The default value of 256 is recommended. This option is available only\nfor JPEG 2000 format.",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "PDF to PNG conversion settings",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "PNG format is useful for images that are used on the web.\nFile settings",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "PDF to TIFF conversion settings",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "File settings",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "Color management",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "PDF to Microso� Word conversion se�ngs",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Convert PDF to RTF",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "Convert PDF to HTML Web Page",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Convert PDF to Microso� Excel",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "Convert PDF to Microsoft Excel (XLSX)",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "Convert PDF to PostScript or Encapsulated PostScript (EPS)",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "Convert PDF to Text and XML 1.0",
+      "page": 22
+    },
+    {
+      "level": "H3",
+      "text": "PDF to Text and XML 1.0 conversion settings",
+      "page": 22
+    },
+    {
+      "level": "H2",
+      "text": "Output file settings",
+      "page": 22
+    },
+    {
+      "level": "H2",
+      "text": "Image file settings",
+      "page": 23
+    },
+    {
+      "level": "H2",
+      "text": "Select and copy text and images",
+      "page": 28
+    },
+    {
+      "level": "H3",
+      "text": "Convert selected content to other formats",
+      "page": 30
+    }
+  ]
+}

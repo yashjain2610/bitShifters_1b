@@ -1,0 +1,95 @@
+{
+  "title": "",
+  "outline": [
+    {
+      "level": "H3",
+      "text": "Select Visio layers to convert (Acrobat Pro)",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "Convert AutoCAD files to PDF (Acrobat Pro for Windows)",
+      "page": 3
+    },
+    {
+      "level": "H1",
+      "text": "Application-specific PDFMaker settings",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Settings tab options available from within most applications",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Excel-specific options on the Settings tab",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "PowerPoint-specific options on the Settings tab",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Email-specific options on the Settings tab",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "AutoCAD-specific options on the Settings tab (Acrobat Pro)",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Visio-specific options on the Settings tab (Acrobat Pro)",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Word tab settings (Microsoft Word)",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Bookmarks tab settings (Microsoft Word)",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "Create PDFs by printing to file",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Create a PDF using the Print command (Windows)",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "Adobe PDF printing preferences (Windows)",
+      "page": 14
+    },
+    {
+      "level": "H1",
+      "text": "Set Adobe PDF printer properties (Windows)",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "Set Adobe PDF printer properties (Windows)",
+      "page": 17
+    },
+    {
+      "level": "H2",
+      "text": "Reassign the port that the Adobe PDF printer uses",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "Delete a folder and reassign the Adobe PDF printer to the default port",
+      "page": 17
+    }
+  ]
+}

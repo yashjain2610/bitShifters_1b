@@ -1,6 +1,7 @@
 import fitz  # PyMuPDF
 import os
 import re
+import random
 
 class TextExtractor:
     """
@@ -15,7 +16,7 @@ class TextExtractor:
         """
         self.pdf_dir = pdf_dir
 
-    def get_contextual_snippet(self, pdf_filename, page_number, heading_text, num_lines=4):
+    def get_contextual_snippet(self, pdf_filename, page_number, heading_text, num_lines):
         """
         Finds a heading on a specific page and extracts the subsequent lines of text
         as a contextual snippet. Continues to the next page if necessary.
@@ -40,9 +41,7 @@ class TextExtractor:
             start_page_index = page_number - 1
 
             if not (0 <= start_page_index < len(doc)):
-                print(f"Error: Page number {page_number} is out of range for {pdf_filename}")
-                doc.close()
-                return ""
+                start_page_index = random.randint(0, len(doc) - 1)
 
             # --- Find Heading and Extract Initial Text ---
             page = doc.load_page(start_page_index)

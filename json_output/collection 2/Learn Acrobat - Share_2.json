@@ -1,0 +1,80 @@
+{
+  "title": "Add comments while viewing a PDF document",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Annotations and drawing markup tools overview",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Show annotations and drawing markup tools",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "1. Choose the Comments icon on the right pane to see the added comments.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Change font size of annotation comments",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "Add a text comment",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Add reactions to comments on shared files",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "Add an arrow, or shape",
+      "page": 9
+    },
+    {
+      "level": "H1",
+      "text": "Group and ungroup markups",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "Group and ungroup markups",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "Group and ungroup markups",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "Add comments in a text box or callout",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Set or change properties for the text box",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "Add comments in a file attachment",
+      "page": 14
+    },
+    {
+      "level": "H1",
+      "text": "Commenting preferences",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Viewing comments",
+      "page": 15
+    }
+  ]
+}

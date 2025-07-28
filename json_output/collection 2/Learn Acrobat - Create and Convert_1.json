@@ -1,0 +1,345 @@
+{
+  "title": "",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "What’s the best way to create a PDF?",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "PDF creation methods by file type",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Refer to the following lists to determine the methods available for the different types of files.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Refer to the following lists to determine the methods available for the different types of files.",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Or, select the hamburger menu (Windows) or the File menu (macOS) > Create from scanner and follow through the workflow.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Method 2 (Windows only): Open the file in its source application and then go to Print > Adobe PDF printer.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Method 3 (Windows only): Right-click on the file and",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Method 4: Drag and drop the file from your system to the Acrobat Home page.",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Method 5 (macOS only): From the authoring application,",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Convert email messages to PDFs",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Method 1 (Windows only): Within Microsoft Outlook or Lotus options (Outlook) or the Actions menu (Lotus Notes).",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Method 2 (Windows only): From the email application, go to Print > Adobe PDF Create a PDF (not a PDF Portfolio).",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Web pages",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Method 2: Drag and drop the HTML file from your system to the Acrobat Home page.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Method 3: Right-click on the file and then select Convert to",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Method 4: From the top-right corner of the webpage,",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "AutoCAD files (Acrobat Pro for Windows only)",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Method 1: From the top tools bar, select Create and then select the file.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Method 2: Drag and drop the HTML file from your system to the Acrobat Home page.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Method 4: Within AutoCAD, go to Print > Adobe PDF.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Adobe Photoshop, Adobe InDesign files",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Method 1: From the top tools bar, select Create a PDF and then select the file.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Method 2: Drag and drop the file from your system to the Acrobat Home page.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "PostScript and EPS files",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Method 1: From the top tools bar, select Create and then select the file.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Method 2: Drag and drop the file from your system to the",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "3D files (Acrobat Pro)",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Method 1: From the top tools bar, select Create and then select the file.",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Method 2: Drag and drop the HTML file from your system to the Acrobat Home page.",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Balance PDF file size and quality",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "commercial printing requires different settings than a PDF intended only for onscreen viewing and quick downloading over the Internet.",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "Convert a file to PDF using Acrobat menu commands",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "2. In the Open dialog box, select the file that you want to convert. You can browse all file",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "types or select a specific type from the Files Of Type drop-down menu.",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Convert a file to PDF using the Convert to PDF tool",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Drag-and-drop to create PDFs",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Convert clipboard content to PDF",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "You can create PDFs from text and images that you copy from applications on macOS or",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "1. Capture content in the Clipboard:",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Use the copy command in the applications.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "2. In Acrobat, choose Create > Clipboard > Create, or choose All tools > Create a",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "PDF > Clipboard > Create.",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Create multiple PDFs from multiple files",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "2. The Create a PDF tool opens. On the le� rail, select Mul�ple files > Create mul�ple",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "PDF files, and then select Next.",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "3. Choose Add Files > Add Files or Add Folders, and then select the files or folder.",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "5. In the Output Op�ons dialog box, specify your target folder and filename",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "About Acrobat PDFMaker",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "Using Create PDF cloud service for PDF conversion",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "Convert a file to PDF using PDFMaker",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Create a PDF and share the link for viewing or commenting",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "1. Open the file in the application used to create it.",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "For Microsoft Office applications, such as Word, Excel, and PowerPoint, click",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "When the conversion has finished, the PDF is opened in Adobe Acrobat. Click",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "the Send File By Email icon ( ) in Acrobat. For more information, see Share a",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Attach a file as PDF (Outlook)",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Convert files to a secured PDF and attach it to an email message (Outlook)",
+      "page": 18
+    },
+    {
+      "level": "H1",
+      "text": "View PDFMaker conversion settings",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "Settings tab of the Adobe PDFMaker preferences",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "Security tab of the Adobe PDFMaker preferences",
+      "page": 21
+    },
+    {
+      "level": "H2",
+      "text": "Convert Microsoft Word, PowerPoint, and Excel files to PDF",
+      "page": 22
+    },
+    {
+      "level": "H1",
+      "text": "Convert email messages to PDFs",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Specify whether email messages become merged PDFs or PDF Portfolios",
+      "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "Add email messages or folders to an existing PDF",
+      "page": 24
+    },
+    {
+      "level": "H1",
+      "text": "Set up automatic email archiving",
+      "page": 26
+    },
+    {
+      "level": "H1",
+      "text": "Create PDFs from Word mail merges",
+      "page": 27
+    },
+    {
+      "level": "H3",
+      "text": "Email options for PDF mail merges",
+      "page": 28
+    },
+    {
+      "level": "H1",
+      "text": "Convert Visio files to PDF (Acrobat Pro)",
+      "page": 29
+    }
+  ]
+}

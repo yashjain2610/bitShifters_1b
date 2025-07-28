@@ -1,0 +1,40 @@
+{
+  "title": "Copy images",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Export objects to separate PDF",
+      "page": 2
+    },
+    {
+      "level": "H1",
+      "text": "Take a snapshot of a page",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "1. (Windows) Select the hamburger menu in the upper left. Then select Undo, Redo &",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "(macOS) Select Edit in the upper left. Then select Undo, Redo and More",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Select anywhere on the page to capture the entire content displayed on the",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Drag a rectangle around the text or images or a combination of both.",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Drag a rectangle within an image to copy just a portion of the image.",
+      "page": 3
+    }
+  ]
+}

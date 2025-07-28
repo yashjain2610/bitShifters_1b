@@ -1,0 +1,65 @@
+{
+  "title": "",
+  "outline": [
+    {
+      "level": "H3",
+      "text": "Persistent chat history",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Clear chat history",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Copy chat history",
+      "page": 3
+    },
+    {
+      "level": "H1",
+      "text": "Read-aloud generated responses",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "Change the playback speed",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "Multiple document support in AI Assistant",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "As a Teams user, learn how to request access to AI Assistant for Acrobat from within the app.",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "Request access from the Admin Console (Teams hybrid admins)",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "Review the status of your request",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "Common questions",
+      "page": 16
+    },
+    {
+      "level": "H1",
+      "text": "Prerequisites",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "License deployment",
+      "page": 18
+    }
+  ]
+}

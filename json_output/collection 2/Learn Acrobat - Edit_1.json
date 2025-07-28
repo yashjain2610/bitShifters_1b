@@ -1,0 +1,60 @@
+{
+  "title": "",
+  "outline": [
+    {
+      "level": "H2",
+      "text": "Edit text in a PDF",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Set the default font for adding and editing text",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Change, replace, or delete text",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Move, rotate, or resize a text box",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Change font color",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Change font color",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "Change font size",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "Change paragraph spacing",
+      "page": 11
+    },
+    {
+      "level": "H1",
+      "text": "Edit images or objects in a PDF",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "About editing text and images",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Delete images from a PDF",
+      "page": 15
+    }
+  ]
+}

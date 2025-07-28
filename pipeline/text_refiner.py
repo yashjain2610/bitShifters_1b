@@ -25,7 +25,7 @@ class TextRefiner:
         self.model = T5ForConditionalGeneration.from_pretrained(model_path).to(self.device)
         print("T5 model loaded successfully.")
 
-    def refine(self, text, max_length=700, min_length=300):
+    def refine(self, text, max_length=700, min_length=150):
         """
         Generates a refined, summary-like version of the input text.
         Args:
@@ -37,7 +37,7 @@ class TextRefiner:
             str: The refined (summarized) text.
         """
         # Prepare the text for T5 by adding the summarization prefix
-        prompt = "summarize: " + text
+        prompt = "summarize:" + text
         
         # Tokenize the input
         inputs = self.tokenizer.encode(
