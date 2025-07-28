@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    deploy:
+      resources:
+        limits:
+          cpus: '8.0'
+          memory: 8G
+        reservations:
+          cpus: '4.0'
+          memory: 4G
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+    entrypoint: ["ollama"]
+    command: ["serve"]
+
+  app:
+    build: .
+    container_name: pdf_processor
+    depends_on:
+      - ollama
+    volumes:
+      - ./Collection 1:/app/Collection 1
+      - ./Collection 2:/app/Collection 2
+      - ./Collection 3:/app/Collection 3
+      - ./json_output:/app/json_output
+      - ./models:/app/models
+    environment:
+      - OLLAMA_API_URL=http://ollama:11434/api
+    deploy:
+      resources:
+        limits:
+          cpus: '8.0'
+          memory: 4G
+        reservations:
+          cpus: '2.0'
+          memory: 2G
+    command: >
+      /bin/bash -c "
+        echo 'Waiting for Ollama to be ready...' &&
+        while ! curl -s http://ollama:11434/api/tags > /dev/null 2>&1; do
+          echo 'Waiting for Ollama...' &&
+          sleep 10
+        done &&
+        echo 'Ollama is ready!' &&
+        echo 'Pulling qwen3:0.6b model...' &&
+        curl -X POST http://ollama:11434/api/pull -d '{\"name\":\"qwen3:0.6b\"}' &&
+        echo 'Model pulled successfully!' &&
+        python 1b_1_final.py
+      "
+
+volumes:
+  ollama_data: 

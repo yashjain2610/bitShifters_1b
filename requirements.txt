@@ -1,0 +1,9 @@
+requests==2.31.0
+PyMuPDF==1.23.8
+jsonschema==4.19.2
+transformers==4.35.0
+torch==2.1.0 
+SentencePiece
+numpy==1.24.3
+pymupdf
+fitz
