@@ -19,18 +19,36 @@
     ],
     "persona": "HR professional",
     "job_to_be_done": "Create and manage fillable forms for onboarding and compliance.",
-    "processing_timestamp": "2025-07-28T22:31:04.121637"
+    "processing_timestamp": "2025-07-28T22:49:48.035191"
   },
   "extracted_sections": [
     {
       "document": "Test Your Acrobat Exporting Skills",
-      "section_title": "7. Yes or No: Can you export a PDF to a reusable format like Microsoft Word?",
+      "section_title": "6. Scenario: You're preparing a presentation for a big meeting. Do you use Acrobat to",
       "importance_rank": 1,
       "page_number": 1
     },
     {
-      "document": "The Ultimate PDF Sharing Checklist",
-      "section_title": "1. Choose the Comments icon on the right pane to see the added comments.",
+      "document": "Learn Acrobat - Request e-signatures_2",
+      "section_title": "14. True or False: You can convert a PDF to a Microsoft PowerPoint presentation using",
+      "importance_rank": 2,
+      "page_number": 4
+    },
+    {
+      "document": "Test Your Acrobat Exporting Skills",
+      "section_title": "10. Yes or No: Does the Autosave feature work if a document's security settings are",
+      "importance_rank": 3,
+      "page_number": 1
+    },
+    {
+      "document": "Test Your Acrobat Exporting Skills",
+      "section_title": "7. Yes or No: Can you export a PDF to a reusable format like Microsoft Word?",
+      "importance_rank": 4,
+      "page_number": 1
+    },
+    {
+      "document": "Learn Acrobat - Share_2",
+      "section_title": "Add a comment to the markup",
       "importance_rank": 5,
       "page_number": 1
     }
@@ -38,12 +56,27 @@
   "subsection_analysis": [
     {
       "document": "Test Your Acrobat Exporting Skills",
+      "refined_text": "Acrobat Reader users can save a copy of a PDF if the creator has enabled usage rights. do you use the \"Convert\" button in Acrobat or retype the entire document? do you use the \"Convert\" button in Acrobat or retype the entire document? do you use the \"Convert to JPEG\" option or take a screenshot? do you use the \"Convert to JPEG\" option or take a screenshot? do you use the \"Convert to HTML?...... apr....................................?",
+      "page_number": 1
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_2",
+      "refined_text": "the option is selected by default. it uses the time mentioned in the timestamp or embedded in the signature. it uses the time mentioned in the timestamp or embedded in the signature. if you deselect the check box, Acrobat discards expired timestamps. if you select the check box, the option is selected by default. the option is selected by default, but it uses the time mentioned in the timestamp or embedded in the signature, even if the signature\u2019s certificate has. 'Verification. 'disad. to. the revocation 'de. it can..",
+      "page_number": 4
+    },
+    {
+      "document": "Test Your Acrobat Exporting Skills",
+      "refined_text": "you can convert a PDF to a Microsoft PowerPoint presentation using Acrobat. do you use the \"Convert\" button in Acrobat or retype the entire document? do you use the \"Convert\" button in Acrobat or retype the entire document? do you use the \"Convert to JPEG\" option or take a screenshot? do you use the \"Convert to JPEG\" option or manually code the content? do you use the \"Convert to HTML\" option or manually code the.. a. a DOC 'disad. sad. a....... a.",
+      "page_number": 1
+    },
+    {
+      "document": "Test Your Acrobat Exporting Skills",
       "refined_text": "Acrobat Reader users can save a copy of a PDF if the creator has enabled usage rights. do you use \"File > Save\" or \"File > Save As\"? do you use the \"Convert\" button in Acrobat or retype the entire document? do you use the \"Convert\" button in Acrobat or retype the entire document? do you use the \"Convert to JPEG\" option or take a screenshot? do you use the \"Convert to JP\u00bb..... aprn a copy of a PDF to a client 'discount\" to a copy of a",
       "page_number": 1
     },
     {
-      "document": "The Ultimate PDF Sharing Checklist",
-      "refined_text": "the Ultimate PDF Sharing Checklist Sharing PDFs can be a breeze with Adobe Acrobat. if you're collaborating on a project, seeking feedback, or simply distributing information, this checklist will ensure you cover all the bases. let's dive into the essentials of sharing PDFs effectively. if you're collaborating on a project, seeking feedback, or simply distributing information, let's dive into the essentials of sharing PDFs effectively. if you're collaborating on...... a.. a... a.. a..",
+      "document": "Learn Acrobat - Share_2",
+      "refined_text": "quick actions are available for commenting based on your selection in a PDF. Actions on text selection: When you select text, you can perform actions like Add sticky note, Highlight image, Redact text, Copy text, and Edit a PDF. in acrobat Reader, complete commenting tools are available only in PDFs with commenting enabled. you can use annotation and drawing markup tools to add comments. comments are notes and drawings that communicate ideas or provide feedback for PDFs. You can type a text..... a...... a.. when you select text, you.",
       "page_number": 1
     }
   ]
